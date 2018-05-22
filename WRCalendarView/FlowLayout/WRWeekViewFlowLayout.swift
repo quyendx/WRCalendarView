@@ -90,7 +90,7 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
         hourHeight = 50
         rowHeaderWidth = 50
         columnHeaderHeight = 50
-        hourGridDivisionValue = .minutes_20
+        hourGridDivisionValue = .minutes_30
         
         initializeMinuteTick()
     }
@@ -100,7 +100,8 @@ class WRWeekViewFlowLayout: UICollectionViewFlowLayout {
         RunLoop.current.add(minuteTimer!, forMode: .defaultRunLoopMode)
     }
 
-    func minuteTick() {
+    @objc
+    private func minuteTick() {
         cachedCurrentTimeComponents.removeAll()
         invalidateLayout()
     }

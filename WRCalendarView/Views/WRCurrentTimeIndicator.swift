@@ -21,8 +21,9 @@ class WRCurrentTimeIndicator: UICollectionReusableView {
         
         updateTimer()
     }
-    
-    func updateTimer() {
+
+    @objc
+    private func updateTimer() {
         timeLbl.text = dateFormatter.string(from: Date())
     }
 }
